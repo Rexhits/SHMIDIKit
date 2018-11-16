@@ -46,3 +46,22 @@ midiHandler.configDevice()
 // Value for pitchbend: 0 = Lowest position, 64 = Middle position, 127=Highest Position
 midiHandler.sendPitchBend(value: 127)
 ```
+
+**Send out a sequence of control message**
+``` swift
+let midiHandler = MIDIHandler.shared
+// create a virtual MIDI source
+midiHandler.configDevice()
+// get the cc number for Pan
+let pan = MIDIController.Pan.rawValue
+// Pan your sound to the left
+midiHandler.sendControlMessage(cc: pan, value: 0)
+// Wait a second
+sleep(1)
+// Pan your sound to the right
+midiHandler.sendControlMessage(cc: pan, value: 127)
+usleep(1)
+// Return your pan to the middle
+midiHandler.sendControlMessage(cc: pan, value: 64)
+```
+
