@@ -64,4 +64,4 @@ usleep(1)
 // Return your pan to the middle
 midiHandler.sendControlMessage(cc: pan, value: 64)
 ```
-## [Documentation](https://rexhits.github.io/SHMIDIKit/)
+# [Documentation](https://rexhits.github.io/SHMIDIKit/)
