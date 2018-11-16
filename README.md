@@ -1,7 +1,6 @@
 # SHMIDIKit
 
-## A lightweight MIDI framework for iOS and macOS, create virtual MIDI source, parse data into MIDI packet and send them out to DAWs.
-
+## A lightweight MIDI framework for iOS and macOS
 ### Installation
 SHMIDKit is written in Swift 4.2, so your code has to be written in Swift 4.x due to current binary compatibility limitations.
 
