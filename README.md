@@ -11,3 +11,14 @@ To use [CocoaPods](https://cocoapods.org) add SHMIDIKit to your `Podfile`:
 pod 'SHMIDIKit'
 ```
 Then run `pod install`.
+
+### Examples
+**Import SHMIDIKit to your project**
+```swift
+import SHMIDIKit
+```
+
+**Get the MIDIHandler Singleton**
+```swift
+let midiHandler = MIDIHandler.shared
+```
