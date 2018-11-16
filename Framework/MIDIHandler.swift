@@ -272,7 +272,7 @@ public enum DrumNotes: UInt8 {
     case CrashCymbal = 49
 }
 
-public enum NoteLength: Int {
+public enum NoteLength: Int64 {
     case Impluse = 500000000
     case Short = 1000000000
     case Long = 3000000000
