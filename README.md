@@ -11,4 +11,4 @@ To use [CocoaPods](https://cocoapods.org) add SHMIDIKit to your `Podfile`:
 ```ruby
 pod 'SHMIDIKit'
 ```
-
+Then run `pod install`.
