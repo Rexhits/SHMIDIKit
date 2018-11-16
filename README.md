@@ -23,7 +23,7 @@ import SHMIDIKit
 let midiHandler = MIDIHandler.shared
 ```
 
-**Create a virtual midi source and send out note on message**
+**Create a virtual midi source and send out a MIDI message**
 ```swift
 let midiHandler = MIDIHandler.shared
 // create a virtual MIDI source
