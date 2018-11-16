@@ -61,8 +61,65 @@
           <section class="section">
             
             <h1 id='shmidikit' class='heading'>SHMIDIKit</h1>
+<h2 id='a-lightweight-midi-framework-for-ios-and-macos' class='heading'>A lightweight MIDI framework for iOS and macOS</h2>
+<h3 id='installation' class='heading'>Installation</h3>
 
-<p>SHMIDIKit is a lightweight MIDI framework for iOS and macOS, create virtual MIDI source, parse data into MIDI packet and send them out to DAWs.</p>
+<p>SHMIDKit is written in Swift 4.2, so your code has to be written in Swift 4.x due to current binary compatibility limitations.</p>
+<h3 id='cocoapods' class='heading'>CocoaPods</h3>
+
+<p>To use <a href="https://cocoapods.org">CocoaPods</a> add SHMIDIKit to your <code>Podfile</code>:</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'SHMIDIKit'</span>
+</code></pre>
+
+<p>Then run <code>pod install</code>.</p>
+<h3 id='examples' class='heading'>Examples</h3>
+
+<p><strong>Import SHMIDIKit to your project</strong></p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">SHMIDIKit</span>
+</code></pre>
+
+<p><strong>Get the MIDIHandler singleton</strong></p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">midiHandler</span> <span class="o">=</span> <span class="kt">MIDIHandler</span><span class="o">.</span><span class="n">shared</span>
+</code></pre>
+
+<p><strong>Create a virtual midi source and send out a MIDI message</strong></p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">midiHandler</span> <span class="o">=</span> <span class="kt">MIDIHandler</span><span class="o">.</span><span class="n">shared</span>
+<span class="c1">// create a virtual MIDI source</span>
+<span class="n">midiHandler</span><span class="o">.</span><span class="nf">configDevice</span><span class="p">()</span>
+<span class="c1">// send message to the first midi channal</span>
+<span class="k">let</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">UInt8</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1">// note number for middle C</span>
+<span class="k">let</span> <span class="nv">noteNumber</span><span class="p">:</span> <span class="kt">UInt8</span> <span class="o">=</span> <span class="mi">60</span>
+<span class="c1">// velocity (0 - 127)</span>
+<span class="k">let</span> <span class="nv">velocity</span><span class="p">:</span> <span class="kt">UInt8</span> <span class="o">=</span> <span class="mi">90</span>
+<span class="c1">// send the noteOn message out</span>
+<span class="n">midiHandler</span><span class="o">.</span><span class="nf">sendNoteOn</span><span class="p">(</span><span class="nv">channel</span><span class="p">:</span> <span class="n">channel</span><span class="p">,</span> <span class="nv">noteNumber</span><span class="p">:</span> <span class="n">noteNumber</span><span class="p">,</span> <span class="nv">velocity</span><span class="p">:</span> <span class="n">velocity</span><span class="p">)</span>
+</code></pre>
+
+<p><strong>Send out a pitchbend message</strong></p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">midiHandler</span> <span class="o">=</span> <span class="kt">MIDIHandler</span><span class="o">.</span><span class="n">shared</span>
+<span class="c1">// create a virtual MIDI source</span>
+<span class="n">midiHandler</span><span class="o">.</span><span class="nf">configDevice</span><span class="p">()</span>
+<span class="c1">// Value for pitchbend: 0 = Lowest position, 64 = Middle position, 127=Highest Position</span>
+<span class="n">midiHandler</span><span class="o">.</span><span class="nf">sendPitchBend</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="mi">127</span><span class="p">)</span>
+</code></pre>
+
+<p><strong>Send out a sequence of control message</strong></p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">midiHandler</span> <span class="o">=</span> <span class="kt">MIDIHandler</span><span class="o">.</span><span class="n">shared</span>
+<span class="c1">// create a virtual MIDI source</span>
+<span class="n">midiHandler</span><span class="o">.</span><span class="nf">configDevice</span><span class="p">()</span>
+<span class="c1">// get the cc number for Pan</span>
+<span class="k">let</span> <span class="nv">pan</span> <span class="o">=</span> <span class="kt">MIDIController</span><span class="o">.</span><span class="kt">Pan</span><span class="o">.</span><span class="n">rawValue</span>
+<span class="c1">// Pan your sound to the left</span>
+<span class="n">midiHandler</span><span class="o">.</span><span class="nf">sendControlMessage</span><span class="p">(</span><span class="nv">cc</span><span class="p">:</span> <span class="n">pan</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span>
+<span class="c1">// Wait a second</span>
+<span class="nf">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1">// Pan your sound to the right</span>
+<span class="n">midiHandler</span><span class="o">.</span><span class="nf">sendControlMessage</span><span class="p">(</span><span class="nv">cc</span><span class="p">:</span> <span class="n">pan</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="mi">127</span><span class="p">)</span>
+<span class="nf">usleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1">// Return your pan to the middle</span>
+<span class="n">midiHandler</span><span class="o">.</span><span class="nf">sendControlMessage</span><span class="p">(</span><span class="nv">cc</span><span class="p">:</span> <span class="n">pan</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="mi">64</span><span class="p">)</span>
+</code></pre>
 
           </section>
         </section>

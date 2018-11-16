@@ -4,28 +4,28 @@
   'roots': [
     {
       'type': 'directory',
-      'name': "/Users/wangrex/Desktop/SHMIDIKit/build/Release-iphoneos/SHMIDIKit.framework/Headers",
+      'name': "/Users/wangrex/Github/SHMIDIKit/build/Release-iphoneos/SHMIDIKit.framework/Headers",
       'contents': [
         {
           'type': 'file',
           'name': "SHMIDIKit-Swift.h",
-          'external-contents': "/Users/wangrex/Desktop/SHMIDIKit/build/Release-iphoneos/SHMIDIKit.framework/Headers/SHMIDIKit-Swift.h"
+          'external-contents': "/Users/wangrex/Github/SHMIDIKit/build/Release-iphoneos/SHMIDIKit.framework/Headers/SHMIDIKit-Swift.h"
         },
         {
           'type': 'file',
           'name': "SHMIDIKit_iOS.h",
-          'external-contents': "/Users/wangrex/Desktop/SHMIDIKit/SHMIDIKit_iOS/SHMIDIKit_iOS.h"
+          'external-contents': "/Users/wangrex/Github/SHMIDIKit/SHMIDIKit_iOS/SHMIDIKit_iOS.h"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/wangrex/Desktop/SHMIDIKit/build/Release-iphoneos/SHMIDIKit.framework/Modules",
+      'name': "/Users/wangrex/Github/SHMIDIKit/build/Release-iphoneos/SHMIDIKit.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/wangrex/Desktop/SHMIDIKit/build/SHMIDIKit.build/Release-iphoneos/SHMIDIKit_iOS.build/module.modulemap"
+          'external-contents': "/Users/wangrex/Github/SHMIDIKit/build/SHMIDIKit.build/Release-iphoneos/SHMIDIKit_iOS.build/module.modulemap"
         }
       ]
     }
