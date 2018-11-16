@@ -37,3 +37,12 @@ let velocity: UInt8 = 90
 // send the noteOn message out
 midiHandler.sendNoteOn(channel: channel, noteNumber: noteNumber, velocity: velocity)
 ```
+
+**Send out a pitchbend message**
+```swift
+let midiHandler = MIDIHandler.shared
+// create a virtual MIDI source
+midiHandler.configDevice()
+// Value for pitchbend: 0 = Lowest position, 64 = Middle position, 127=Highest Position
+midiHandler.sendPitchBend(value: 127)
+```
