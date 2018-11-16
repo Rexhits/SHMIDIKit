@@ -1,0 +1,6 @@
+version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+options: "b69f92c4bc4aa3633f821a60e9e5e4cd"
+build_time: [1542337345, 200810000]
+inputs:
+  "/Users/wangrex/Desktop/SHMIDIKit/Framework/Extensions.swift": [9223372036, 854775807]
+  "/Users/wangrex/Desktop/SHMIDIKit/Framework/MIDIHandler.swift": [9223372036, 854775807]

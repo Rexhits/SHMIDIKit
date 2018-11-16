@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MIDIHandler Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/MIDIHandler" class="dashAnchor"></a>
+    <a title="MIDIHandler Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">SHMIDIKit Docs</a> (18% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">SHMIDIKit Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        MIDIHandler Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/MIDIHandler.html">MIDIHandler</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/CommonMIDIController.html">CommonMIDIController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/DrumNotes.html">DrumNotes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/MIDIController.html">MIDIController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/MIDIEvent.html">MIDIEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NoteLength.html">NoteLength</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>MIDIHandler</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">MIDIHandler</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SHMIDIKit11MIDIHandlerC18midiControllerListSaySSGvp"></a>
+                    <a name="//apple_ref/swift/Property/midiControllerList" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SHMIDIKit11MIDIHandlerC18midiControllerListSaySSGvp">midiControllerList</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">midiControllerList</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SHMIDIKit11MIDIHandlerC6sharedACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/shared" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SHMIDIKit11MIDIHandlerC6sharedACvpZ">shared</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Singleton of MIDIHandler</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">shared</span><span class="p">:</span> <span class="kt">MIDIHandler</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SHMIDIKit11MIDIHandlerCACycfc"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SHMIDIKit11MIDIHandlerCACycfc">init()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialization, read controller list from file</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SHMIDIKit11MIDIHandlerC18secondToNanoSecond0C0s6UInt64VAG_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/secondToNanoSecond(second:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SHMIDIKit11MIDIHandlerC18secondToNanoSecond0C0s6UInt64VAG_tFZ">secondToNanoSecond(second:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Convert second to nanosecond, MIDI Timestamp is in nanosecond</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">secondToNanoSecond</span><span class="p">(</span><span class="nv">second</span><span class="p">:</span> <span class="kt">UInt64</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UInt64</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SHMIDIKit11MIDIHandlerC12configDeviceyyF"></a>
+                    <a name="//apple_ref/swift/Method/configDevice()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SHMIDIKit11MIDIHandlerC12configDeviceyyF">configDevice()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a virtual MIDI source, for outputing midi data to DAWs</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configDevice</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SHMIDIKit11MIDIHandlerC13sendMIDIEvent5event7channel5data15data2yAA0D0O_s5UInt8VA2LtF"></a>
+                    <a name="//apple_ref/swift/Method/sendMIDIEvent(event:channel:data1:data2:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SHMIDIKit11MIDIHandlerC13sendMIDIEvent5event7channel5data15data2yAA0D0O_s5UInt8VA2LtF">sendMIDIEvent(event:channel:data1:data2:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Send a midi packet</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">sendMIDIEvent</span><span class="p">(</span><span class="nv">event</span><span class="p">:</span> <span class="kt"><a href="../Enums/MIDIEvent.html">MIDIEvent</a></span><span class="p">,</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">UInt8</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">data1</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">,</span> <span class="nv">data2</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>event</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>See MIDIEvent Enum</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>MIDI Channel number 0-15</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data1</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>2nd Byte of a MIDI message</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data2</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>3nd Byte of a MIDI Message</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SHMIDIKit11MIDIHandlerC8sendNote7channel10noteNumber8velocity8durationys5UInt8V_A2jA0D6LengthOtF"></a>
+                    <a name="//apple_ref/swift/Method/sendNote(channel:noteNumber:velocity:duration:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SHMIDIKit11MIDIHandlerC8sendNote7channel10noteNumber8velocity8durationys5UInt8V_A2jA0D6LengthOtF">sendNote(channel:noteNumber:velocity:duration:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Send a pair of note on &amp; note off message</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">sendNote</span><span class="p">(</span><span class="nv">channel</span><span class="p">:</span> <span class="kt">UInt8</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">noteNumber</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">,</span> <span class="nv">velocity</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">,</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt"><a href="../Enums/NoteLength.html">NoteLength</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>MIDI Channel number 0-15</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>noteNumber</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>0-127</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>velocity</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>0-127</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>duration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>See NoteLength Enum</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SHMIDIKit11MIDIHandlerC10sendNoteOn7channel10noteNumber8velocityys5UInt8V_A2ItF"></a>
+                    <a name="//apple_ref/swift/Method/sendNoteOn(channel:noteNumber:velocity:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SHMIDIKit11MIDIHandlerC10sendNoteOn7channel10noteNumber8velocityys5UInt8V_A2ItF">sendNoteOn(channel:noteNumber:velocity:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Send a note on message</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">sendNoteOn</span> <span class="p">(</span><span class="nv">channel</span><span class="p">:</span> <span class="kt">UInt8</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">noteNumber</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">,</span> <span class="nv">velocity</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>MIDI Channel number 0-15</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>noteNumber</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>0-127</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>velocity</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>0-127</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SHMIDIKit11MIDIHandlerC11sendNoteOff7channel10noteNumberys5UInt8V_AHtF"></a>
+                    <a name="//apple_ref/swift/Method/sendNoteOff(channel:noteNumber:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SHMIDIKit11MIDIHandlerC11sendNoteOff7channel10noteNumberys5UInt8V_AHtF">sendNoteOff(channel:noteNumber:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Send a note off message</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">sendNoteOff</span> <span class="p">(</span><span class="nv">channel</span><span class="p">:</span> <span class="kt">UInt8</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">noteNumber</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>MIDI Channel number 0-15</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>noteNumber</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>0-127</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SHMIDIKit11MIDIHandlerC13sendPitchBend7channel5valueys5UInt8V_AHtF"></a>
+                    <a name="//apple_ref/swift/Method/sendPitchBend(channel:value:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SHMIDIKit11MIDIHandlerC13sendPitchBend7channel5valueys5UInt8V_AHtF">sendPitchBend(channel:value:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Send a pitchbend message</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">sendPitchBend</span> <span class="p">(</span><span class="nv">channel</span><span class="p">:</span> <span class="kt">UInt8</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>MIDI Channel number 0-15</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>0-127, 64 is pitchbend in the middle position</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SHMIDIKit11MIDIHandlerC14sendAfterTouch7channel5valueys5UInt8V_AHtF"></a>
+                    <a name="//apple_ref/swift/Method/sendAfterTouch(channel:value:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SHMIDIKit11MIDIHandlerC14sendAfterTouch7channel5valueys5UInt8V_AHtF">sendAfterTouch(channel:value:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Send a aftertouch message</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">sendAfterTouch</span> <span class="p">(</span><span class="nv">channel</span><span class="p">:</span> <span class="kt">UInt8</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>MIDI Channel number 0-15</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>0-127</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SHMIDIKit11MIDIHandlerC18sendControlMessage7channel2cc5valueys5UInt8V_A2ItF"></a>
+                    <a name="//apple_ref/swift/Method/sendControlMessage(channel:cc:value:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SHMIDIKit11MIDIHandlerC18sendControlMessage7channel2cc5valueys5UInt8V_A2ItF">sendControlMessage(channel:cc:value:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Send a midi control message</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">sendControlMessage</span><span class="p">(</span><span class="nv">channel</span><span class="p">:</span> <span class="kt">UInt8</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">cc</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>MIDI Channel number 0-15</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cc</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>controller number 0-127</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>0-127</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SHMIDIKit11MIDIHandlerC14sendAllNoteOff7channelys5UInt8V_tF"></a>
+                    <a name="//apple_ref/swift/Method/sendAllNoteOff(channel:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SHMIDIKit11MIDIHandlerC14sendAllNoteOff7channelys5UInt8V_tF">sendAllNoteOff(channel:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Mute all notes on a channel</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">sendAllNoteOff</span><span class="p">(</span><span class="nv">channel</span><span class="p">:</span> <span class="kt">UInt8</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SHMIDIKit11MIDIHandlerC9flushMIDIyyF"></a>
+                    <a name="//apple_ref/swift/Method/flushMIDI()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SHMIDIKit11MIDIHandlerC9flushMIDIyyF">flushMIDI()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>MIDI Flush</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">flushMIDI</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SHMIDIKit11MIDIHandlerC14resetPitchBendyyF"></a>
+                    <a name="//apple_ref/swift/Method/resetPitchBend()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SHMIDIKit11MIDIHandlerC14resetPitchBendyyF">resetPitchBend()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Reset pitchbend to middle position</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">resetPitchBend</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://sonichits.studio/" target="_blank" rel="external">Rex Wang</a>. All rights reserved. (Last updated: 2018-11-15)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

@@ -1,0 +1,4 @@
+framework module SHMIDIKit {
+  header "SHMIDIKit-Swift.h"
+  requires objc
+}
