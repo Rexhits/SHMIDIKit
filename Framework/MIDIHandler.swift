@@ -131,7 +131,7 @@ public class MIDIHandler {
     ///   - value: 0-127, 64 is pitchbend in the middle position
     public func sendPitchBend (channel: UInt8 = 0, value: UInt8) {
         // input within 0 ... 127
-        let input = Int(8192 + 8192 * Double(value).map(start1: 0, stop1: 127, start2: -1, stop2: 1))
+        let input = Int(8192 + 8191 * Double(value).map(start1: 0, stop1: 127, start2: -1, stop2: 1))
         let data1 = UInt8(input & 127)
         let data2 = UInt8((input >> 7) & 127)
         sendMIDIEvent(event: .PitchBend, data1: data1, data2: data2)
