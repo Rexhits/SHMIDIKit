@@ -2,13 +2,6 @@
   "warnings": [
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": null,
-      "symbol": "MIDIHandler",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
       "line": 13,
       "symbol": "MIDIHandler",
       "symbol_kind": "source.lang.swift.decl.class",
@@ -23,420 +16,420 @@
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 199,
+      "line": 198,
       "symbol": "MIDIEvent",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 200,
+      "line": 199,
       "symbol": "MIDIEvent.NoteOff",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 201,
+      "line": 200,
       "symbol": "MIDIEvent.NoteOn",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 202,
+      "line": 201,
       "symbol": "MIDIEvent.PolyAfterTouch",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 203,
+      "line": 202,
       "symbol": "MIDIEvent.ControlChange",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 204,
+      "line": 203,
       "symbol": "MIDIEvent.ProgramChange",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 205,
+      "line": 204,
       "symbol": "MIDIEvent.AfterTouch",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 206,
+      "line": 205,
       "symbol": "MIDIEvent.PitchBend",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 209,
+      "line": 208,
       "symbol": "MIDIController",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 210,
+      "line": 209,
       "symbol": "MIDIController.BankSelect",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 211,
+      "line": 210,
       "symbol": "MIDIController.Modulation",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 212,
+      "line": 211,
       "symbol": "MIDIController.BreathController",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 213,
+      "line": 212,
       "symbol": "MIDIController.FootController",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 214,
+      "line": 213,
       "symbol": "MIDIController.PortamentoTime",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 215,
+      "line": 214,
       "symbol": "MIDIController.DataEntryMSB",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 216,
+      "line": 215,
       "symbol": "MIDIController.Volume",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 217,
+      "line": 216,
       "symbol": "MIDIController.Balance",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 218,
+      "line": 217,
       "symbol": "MIDIController.Pan",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 219,
+      "line": 218,
       "symbol": "MIDIController.Expression",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 220,
+      "line": 219,
       "symbol": "MIDIController.EffectController1",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 221,
+      "line": 220,
       "symbol": "MIDIController.EffectController2",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 222,
+      "line": 221,
       "symbol": "MIDIController.SustainPedal",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 223,
+      "line": 222,
       "symbol": "MIDIController.PortamentoSwitch",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 224,
+      "line": 223,
       "symbol": "MIDIController.SostenutoSwitch",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 225,
+      "line": 224,
       "symbol": "MIDIController.SoftPedal",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 226,
+      "line": 225,
       "symbol": "MIDIController.LegatoSwitch",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 227,
+      "line": 226,
       "symbol": "MIDIController.AllSoundOff",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 228,
+      "line": 227,
       "symbol": "MIDIController.ResetAllControllers",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 229,
+      "line": 228,
       "symbol": "MIDIController.LocalSwitch",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 230,
+      "line": 229,
       "symbol": "MIDIController.AllNotesOff",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 231,
+      "line": 230,
       "symbol": "MIDIController.OmniModeOff",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 232,
+      "line": 231,
       "symbol": "MIDIController.OmniModeOn",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 233,
+      "line": 232,
       "symbol": "MIDIController.MonoMode",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 234,
+      "line": 233,
       "symbol": "MIDIController.PolyMode",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 237,
+      "line": 236,
       "symbol": "CommonMIDIController",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 238,
+      "line": 237,
       "symbol": "CommonMIDIController.PitchBend",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 239,
+      "line": 238,
       "symbol": "CommonMIDIController.ModWheel",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 240,
+      "line": 239,
       "symbol": "CommonMIDIController.Volume",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 241,
+      "line": 240,
       "symbol": "CommonMIDIController.Expression",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 242,
+      "line": 241,
       "symbol": "CommonMIDIController.Pan",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 243,
+      "line": 242,
       "symbol": "CommonMIDIController.Aftertouch",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 245,
+      "line": 244,
       "symbol": "CommonMIDIController.fromRawValue(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 263,
+      "line": 262,
       "symbol": "DrumNotes",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 264,
+      "line": 263,
       "symbol": "DrumNotes.Kick",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 265,
+      "line": 264,
       "symbol": "DrumNotes.Snare",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 266,
+      "line": 265,
       "symbol": "DrumNotes.FloorTom2",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 267,
+      "line": 266,
       "symbol": "DrumNotes.FloorTom1",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 268,
+      "line": 267,
       "symbol": "DrumNotes.HiHatClosed",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 269,
+      "line": 268,
       "symbol": "DrumNotes.LowTom",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 270,
+      "line": 269,
       "symbol": "DrumNotes.LowMidTom",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 271,
+      "line": 270,
       "symbol": "DrumNotes.HiHatOpen",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 272,
+      "line": 271,
       "symbol": "DrumNotes.HiTom",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 273,
+      "line": 272,
       "symbol": "DrumNotes.CrashCymbal",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 276,
+      "line": 275,
       "symbol": "NoteLength",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 277,
+      "line": 276,
       "symbol": "NoteLength.Impluse",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 278,
+      "line": 277,
       "symbol": "NoteLength.Short",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 279,
+      "line": 278,
       "symbol": "NoteLength.Long",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 280,
+      "line": 279,
       "symbol": "NoteLength.Forever",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 282,
+      "line": 281,
       "symbol": "NoteLength.getIndex()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wangrex/Github/SHMIDIKit/Framework/MIDIHandler.swift",
-      "line": 295,
+      "line": 294,
       "symbol": "NoteLength.fromIndex(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"

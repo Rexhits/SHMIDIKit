@@ -10,7 +10,7 @@ import Foundation
 import CoreMIDI
 import CoreAudio
 
-public class MIDIHandler {
+public final class MIDIHandler {
     private var midiClient: MIDIClientRef = 0
     private var outPort: MIDIPortRef = 0
     private var srcPort: MIDIPortRef = 0
@@ -27,6 +27,9 @@ public class MIDIHandler {
         readControllerList()
     }
     
+}
+
+public extension MIDIHandler {
     /// Convert second to nanosecond, MIDI Timestamp is in nanosecond
     public static func secondToNanoSecond(second: UInt64) -> UInt64 {
         return second * UInt64(powf(10.0, 9.0))
@@ -187,8 +190,6 @@ public class MIDIHandler {
             }
         }
     }
-    
-    
     
 }
 
