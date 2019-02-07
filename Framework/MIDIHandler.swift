@@ -163,7 +163,7 @@ public extension MIDIHandler {
     
     /// Mute all notes on a channel
     public func sendAllNoteOff(channel: UInt8 = 0) {
-        sendMIDIEvent(event: .ControlChange, data1: MIDIController.AllNotesOff.rawValue, data2: 0)
+        sendMIDIEvent(event: .ControlChange, data1: UInt8(MIDIController.AllNotesOff.rawValue), data2: 0)
     }
     
     /// MIDI Flush
@@ -206,20 +206,18 @@ public extension MIDIHandler {
     case PitchBend = 0xE0
 }
 
-public enum MIDIController: UInt8 {
+public enum MIDIController: Int, CaseIterable {
     case BankSelect = 0
-    case Modulation = 1
-    case BreathController = 2
     case FootController = 4
     case PortamentoTime = 5
     case DataEntryMSB = 6
-    case Volume = 7
     case Balance = 8
-    case Pan = 10
-    case Expression = 11
     case EffectController1 = 12
     case EffectController2 = 13
-    case SustainPedal = 64
+    case GeneralPurposeController1 = 16
+    case GeneralPurposeController2 = 17
+    case GeneralPurposeController3 = 18
+    case GeneralPurposeController4 = 19
     case PortamentoSwitch = 65
     case SostenutoSwitch = 66
     case SoftPedal = 67
@@ -234,30 +232,20 @@ public enum MIDIController: UInt8 {
     case PolyMode = 127
 }
 
-@objc public enum CommonMIDIController: Int {
-    case PitchBend = 0
+public enum CommonMIDIController: Int, CaseIterable {
+    case PitchBend = 999
+    case Aftertouch = 1000
     case ModWheel = 1
-    case Volume = 2
-    case Expression = 3
-    case Pan = 4
-    case Aftertouch = 5
+    case BreathController = 2
+    case Volume = 7
+    case Pan = 10
+    case Expression = 11
+    case SustainPedal = 64
+    case Resonance_XG = 71
+    case ReleaseTime_XG = 72
+    case AttackTime_XG = 73
+    case Brightness_XG = 74
     
-    public static func fromRawValue(_ value: Int) -> CommonMIDIController {
-        switch value {
-        case 0:
-            return .PitchBend
-        case 1:
-            return .ModWheel
-        case 2:
-            return .Volume
-        case 3:
-            return .Expression
-        case 4:
-            return .Pan
-        default:
-            return .Aftertouch
-        }
-    }
 }
 
 public enum DrumNotes: UInt8 {
