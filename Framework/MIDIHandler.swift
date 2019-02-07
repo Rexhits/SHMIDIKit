@@ -17,6 +17,7 @@ public final class MIDIHandler {
     
     public var midiControllerList = [String]()
     
+    var packetArray: [[UInt8]] = []
     
     /// Singleton of MIDIHandler
     public static var shared = MIDIHandler()
@@ -45,29 +46,41 @@ public extension MIDIHandler {
     }
     
     
-    /// Send a midi packet
+    /// buffer a midi packet
     ///
     /// - Parameters:
     ///   - event: See MIDIEvent Enum
     ///   - channel: MIDI Channel number 0-15
     ///   - data1: 2nd Byte of a MIDI message
     ///   - data2: 3nd Byte of a MIDI Message
-    public func sendMIDIEvent(event: MIDIEvent, channel: UInt8 = 0, data1: UInt8, data2: UInt8) {
-        var packet = MIDIPacket()
-        #if os(iOS)
-        packet.timeStamp = mach_absolute_time()
-        #elseif os(OSX)
-        packet.timeStamp = AudioConvertHostTimeToNanos(AudioGetCurrentHostTime())
-        #endif
-        packet.length = 3
-        packet.data.0 = event.rawValue + channel
-        packet.data.1 = data1
-        packet.data.2 = data2
-        var packetList = MIDIPacketList(numPackets: 1, packet: packet)
-        MIDIReceived(MIDIHandler.shared.srcPort, &packetList)
+    public func bufferMIDIEvent(event: MIDIEvent, channel: UInt8 = 0, data1: UInt8, data2: UInt8) {
+        packetArray.append([event.rawValue + channel, data1, data2])
     }
     
-    /// Send a pair of note on & note off message
+    public func sendPacket() {
+        #if os(iOS)
+        let timeStamp = mach_absolute_time()
+        #elseif os(OSX)
+        let timeStamp = AudioConvertHostTimeToNanos(AudioGetCurrentHostTime())
+        #endif
+        let totalBytesInEvents = packetArray.reduce(0, {total, event in
+            return total + event.count
+        })
+        let listSize = MemoryLayout<MIDIPacketList>.size + Int(totalBytesInEvents)
+        guard totalBytesInEvents < 256 else {return}
+        
+        let byteBuffer = UnsafeMutablePointer<UInt8>.allocate(capacity: listSize)
+        var packetList = byteBuffer.withMemoryRebound(to: MIDIPacketList.self, capacity: 1) { (packetArr) -> MIDIPacketList in
+            var packet = MIDIPacketListInit(packetArr)
+            packetArray.forEach{packet = MIDIPacketListAdd(packetArr, listSize, packet, timeStamp, $0.count, $0)}
+            return packetArr.pointee
+        }
+        MIDIReceived(MIDIHandler.shared.srcPort, &packetList)
+        packetArray = []
+        byteBuffer.deallocate()
+    }
+    
+    /// send a pair of note on & note off message
     ///
     /// - Parameters:
     ///   - channel: MIDI Channel number 0-15
@@ -106,64 +119,64 @@ public extension MIDIHandler {
     }
     
     
-    /// Send a note on message
+    /// buffer a note on message
     ///
     /// - Parameters:
     ///   - channel: MIDI Channel number 0-15
     ///   - noteNumber: 0-127
     ///   - velocity: 0-127
-    public func sendNoteOn (channel: UInt8 = 0, noteNumber: UInt8, velocity: UInt8) {
-        sendMIDIEvent(event: .NoteOn, channel: channel, data1: noteNumber, data2: velocity)
+    public func bufferNoteOn (channel: UInt8 = 0, noteNumber: UInt8, velocity: UInt8) {
+        bufferMIDIEvent(event: .NoteOn, channel: channel, data1: noteNumber, data2: velocity)
     }
     
-    /// Send a note off message
+    /// buffer a note off message
     ///
     /// - Parameters:
     ///   - channel: MIDI Channel number 0-15
     ///   - noteNumber: 0-127
-    public func sendNoteOff (channel: UInt8 = 0, noteNumber: UInt8) {
-        sendMIDIEvent(event: .NoteOff, channel: channel, data1: noteNumber, data2: 0)
+    public func bufferNoteOff (channel: UInt8 = 0, noteNumber: UInt8) {
+        bufferMIDIEvent(event: .NoteOff, channel: channel, data1: noteNumber, data2: 0)
     }
     
     
     
-    /// Send a pitchbend message
+    /// buffer a pitchbend message
     ///
     /// - Parameters:
     ///   - channel: MIDI Channel number 0-15
     ///   - value: 0-127, 64 is pitchbend in the middle position
-    public func sendPitchBend (channel: UInt8 = 0, value: UInt8) {
+    public func bufferPitchBend (channel: UInt8 = 0, value: UInt8) {
         // input within 0 ... 127
         let input = Int(8192 + 8191 * Double(value).map(start1: 0, stop1: 127, start2: -1, stop2: 1))
         let data1 = UInt8(input & 127)
         let data2 = UInt8((input >> 7) & 127)
-        sendMIDIEvent(event: .PitchBend, data1: data1, data2: data2)
+        bufferMIDIEvent(event: .PitchBend, data1: data1, data2: data2)
     }
     
     
-    /// Send a aftertouch message
+    /// buffer a aftertouch message
     ///
     /// - Parameters:
     ///   - channel: MIDI Channel number 0-15
     ///   - value: 0-127
-    public func sendAfterTouch (channel: UInt8 = 0, value: UInt8) {
-        sendMIDIEvent(event: .AfterTouch, data1: value, data2: 0)
+    public func bufferAfterTouch (channel: UInt8 = 0, value: UInt8) {
+        bufferMIDIEvent(event: .AfterTouch, data1: value, data2: 0)
     }
     
     
-    /// Send a midi control message
+    /// buffer a midi control message
     ///
     /// - Parameters:
     ///   - channel: MIDI Channel number 0-15
     ///   - cc: controller number 0-127
     ///   - value: 0-127
-    public func sendControlMessage(channel: UInt8 = 0, cc: UInt8, value: UInt8) {
-        sendMIDIEvent(event: .ControlChange, data1: cc, data2: value)
+    public func bufferControlMessage(channel: UInt8 = 0, cc: UInt8, value: UInt8) {
+        bufferMIDIEvent(event: .ControlChange, data1: cc, data2: value)
     }
     
     /// Mute all notes on a channel
-    public func sendAllNoteOff(channel: UInt8 = 0) {
-        sendMIDIEvent(event: .ControlChange, data1: UInt8(MIDIController.AllNotesOff.rawValue), data2: 0)
+    public func bufferAllNoteOff(channel: UInt8 = 0) {
+        bufferMIDIEvent(event: .ControlChange, data1: UInt8(MIDIController.AllNotesOff.rawValue), data2: 0)
     }
     
     /// MIDI Flush
@@ -173,7 +186,7 @@ public extension MIDIHandler {
     
     /// Reset pitchbend to middle position
     public func resetPitchBend() {
-        sendPitchBend(value: 64)
+        bufferPitchBend(value: 64)
     }
     
     
