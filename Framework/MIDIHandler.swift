@@ -245,7 +245,21 @@ public enum CommonMIDIController: Int, CaseIterable {
     case ReleaseTime_XG = 72
     case AttackTime_XG = 73
     case Brightness_XG = 74
-    
+}
+
+public enum CCShortName: Int, CaseIterable {
+    case PB = 999
+    case AT = 1000
+    case Mod = 1
+    case Bre = 2
+    case Vol = 7
+    case Pan = 10
+    case Exp = 11
+    case Sus = 64
+    case Res = 71
+    case Rel = 72
+    case Att = 73
+    case Bri = 74
 }
 
 public enum DrumNotes: UInt8 {
