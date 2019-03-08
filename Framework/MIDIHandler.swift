@@ -34,10 +34,17 @@ public extension MIDIHandler {
     
     
     /// Create a virtual MIDI source, for outputing midi data to DAWs
-    public func configDevice() {
-        MIDIClientCreate("S-Motion Midi Client" as CFString, nil, nil, &midiClient)
-        MIDIOutputPortCreate(midiClient, "S-Motion MIDI Out" as CFString, &outPort)
-        MIDISourceCreate(midiClient, "S-Motion" as CFString, &srcPort)
+    public func configDevice(_ deviceName: String) {
+        MIDIClientCreate("\(deviceName) Midi Client" as CFString, nil, nil, &midiClient)
+        MIDIOutputPortCreate(midiClient, "\(deviceName) MIDI Out" as CFString, &outPort)
+        MIDISourceCreate(midiClient, "\(deviceName)" as CFString, &srcPort)
+        if let name = UserDefaults.standard.value(forKey: "MIDISourceName") as? String {
+            if name != deviceName {
+                var id: Int32 = 0
+                MIDIObjectGetIntegerProperty(srcPort, kMIDIPropertyUniqueID, &id)
+                UserDefaults.standard.set(Int(id), forKey: "MIDISourceUUID")
+            }
+        }
         if let uuid = UserDefaults.standard.value(forKey: "MIDISourceUUID") as? Int {
             MIDIObjectSetIntegerProperty(srcPort, kMIDIPropertyUniqueID, Int32(uuid))
         } else {
