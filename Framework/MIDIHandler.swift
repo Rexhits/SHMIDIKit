@@ -15,7 +15,6 @@ public final class MIDIHandler {
     private var outPort: MIDIPortRef = 0
     private var srcPort: MIDIPortRef = 0
     
-    public var midiControllerList = [String]()
     
     var packetArray: [[UInt8]] = []
     
@@ -23,10 +22,7 @@ public final class MIDIHandler {
     public static var shared = MIDIHandler()
     
     
-    /// Initialization, read controller list from file
-    public init() {
-        readControllerList()
-    }
+
     
 }
 
@@ -42,7 +38,13 @@ public extension MIDIHandler {
         MIDIClientCreate("S-Motion Midi Client" as CFString, nil, nil, &midiClient)
         MIDIOutputPortCreate(midiClient, "S-Motion MIDI Out" as CFString, &outPort)
         MIDISourceCreate(midiClient, "S-Motion" as CFString, &srcPort)
-        
+        if let uuid = UserDefaults.standard.value(forKey: "MIDISourceUUID") as? Int {
+            MIDIObjectSetIntegerProperty(srcPort, kMIDIPropertyUniqueID, Int32(uuid))
+        } else {
+            var id: Int32 = 0
+            MIDIObjectGetIntegerProperty(srcPort, kMIDIPropertyUniqueID, &id)
+            UserDefaults.standard.set(Int(id), forKey: "MIDISourceUUID")
+        }
     }
     
     
@@ -189,20 +191,6 @@ public extension MIDIHandler {
         bufferPitchBend(value: 64)
     }
     
-    
-    private func readControllerList() {
-        let pathToCSV = Bundle.main.url(forResource: "midiControllerList", withExtension: "csv")
-        if let path = pathToCSV {
-            let data = try! String.init(contentsOf: path, encoding: .utf8)
-            let arr = data.components(separatedBy: "\n")
-            for i in arr {
-                let item = i.components(separatedBy: ",")
-                let num = item.first!
-                let name = item.last!
-                midiControllerList.append("\(num) \(name)")
-            }
-        }
-    }
     
 }
 

@@ -49,7 +49,6 @@
 		FDEBC3D4219E4CE100F3C5C6 /* SHMIDIKit_MacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SHMIDIKit_MacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDEBC3D9219E4CE100F3C5C6 /* SHMIDIKit_MacTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHMIDIKit_MacTests.swift; sourceTree = "<group>"; };
 		FDEBC3DB219E4CE100F3C5C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FDEBC3E3219E4D4700F3C5C6 /* midiControllerList.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = midiControllerList.csv; sourceTree = "<group>"; };
 		FDEBC3E4219E4D4A00F3C5C6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FDEBC3E9219E4D6F00F3C5C6 /* MIDIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDIHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				FDEBC3F0219E4FA600F3C5C6 /* Framework */,
-				FDEBC3E3219E4D4700F3C5C6 /* midiControllerList.csv */,
 				FDEBC3B1219E4CCA00F3C5C6 /* SHMIDIKit_iOS */,
 				FDEBC3BC219E4CCA00F3C5C6 /* SHMIDIKit_iOSTests */,
 				FDEBC3CD219E4CE100F3C5C6 /* SHMIDIKit_Mac */,
