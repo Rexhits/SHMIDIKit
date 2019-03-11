@@ -37,7 +37,7 @@ public extension MIDIHandler {
     public func configDevice(_ deviceName: String) {
         MIDIClientCreate("\(deviceName) Midi Client" as CFString, nil, nil, &midiClient)
         MIDIOutputPortCreate(midiClient, "\(deviceName) MIDI Out" as CFString, &outPort)
-        MIDISourceCreate(midiClient, "\(deviceName)" as CFString, &srcPort)
+        MIDISourceCreate(midiClient, deviceName as CFString, &srcPort)
         if let name = UserDefaults.standard.value(forKey: "MIDISourceName") as? String {
             if name != deviceName {
                 var id: Int32 = 0
@@ -159,7 +159,7 @@ public extension MIDIHandler {
         let input = Int(8192 + 8191 * Double(value).map(start1: 0, stop1: 127, start2: -1, stop2: 1))
         let data1 = UInt8(input & 127)
         let data2 = UInt8((input >> 7) & 127)
-        bufferMIDIEvent(event: .PitchBend, data1: data1, data2: data2)
+        bufferMIDIEvent(event: .PitchBend, channel: channel, data1: data1, data2: data2)
     }
     
     
@@ -169,7 +169,7 @@ public extension MIDIHandler {
     ///   - channel: MIDI Channel number 0-15
     ///   - value: 0-127
     public func bufferAfterTouch (channel: UInt8 = 0, value: UInt8) {
-        bufferMIDIEvent(event: .AfterTouch, data1: value, data2: 0)
+        bufferMIDIEvent(event: .AfterTouch, channel: channel, data1: value, data2: 0)
     }
     
     
@@ -180,12 +180,12 @@ public extension MIDIHandler {
     ///   - cc: controller number 0-127
     ///   - value: 0-127
     public func bufferControlMessage(channel: UInt8 = 0, cc: UInt8, value: UInt8) {
-        bufferMIDIEvent(event: .ControlChange, data1: cc, data2: value)
+        bufferMIDIEvent(event: .ControlChange, channel: channel, data1: cc, data2: value)
     }
     
     /// Mute all notes on a channel
     public func bufferAllNoteOff(channel: UInt8 = 0) {
-        bufferMIDIEvent(event: .ControlChange, data1: UInt8(MIDIController.AllNotesOff.rawValue), data2: 0)
+        bufferMIDIEvent(event: .ControlChange, channel: channel, data1: UInt8(MIDIController.AllNotesOff.rawValue), data2: 0)
     }
     
     /// MIDI Flush
