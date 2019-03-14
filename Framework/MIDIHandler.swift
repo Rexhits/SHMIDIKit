@@ -127,6 +127,43 @@ public extension MIDIHandler {
         MIDIReceived(MIDIHandler.shared.srcPort, &offPacketList)
     }
     
+    /// send a pair of note on & note off message
+    ///
+    /// - Parameters:
+    ///   - channel: MIDI Channel number 0-15
+    ///   - noteNumber: 0-127
+    ///   - velocity: 0-127
+    ///   - duration: milliseconds
+    public func sendNote(channel: UInt8 = 0, noteNumber: UInt8, velocity: UInt8, duration: UInt64) {
+        var onPacket = MIDIPacket()
+        #if os(iOS)
+        onPacket.timeStamp = mach_absolute_time()
+        #elseif os(OSX)
+        onPacket.timeStamp = AudioConvertHostTimeToNanos(AudioGetCurrentHostTime())
+        #endif
+        onPacket.length = 3
+        onPacket.data.0 = MIDIEvent.NoteOn.rawValue
+        onPacket.data.1 = noteNumber
+        onPacket.data.2 = velocity
+        
+        
+        var offPacket = MIDIPacket()
+        #if os(iOS)
+        offPacket.timeStamp = mach_absolute_time() + MIDITimeStamp(duration.rawValue)
+        #elseif os(OSX)
+        offPacket.timeStamp = AudioConvertHostTimeToNanos(AudioGetCurrentHostTime()) + MIDITimeStamp(duration * 1000)
+        #endif
+        offPacket.length = 3
+        offPacket.data.0 = MIDIEvent.NoteOff.rawValue
+        offPacket.data.1 = noteNumber
+        offPacket.data.2 = velocity
+        
+        var onPacketList = MIDIPacketList(numPackets: 1, packet: onPacket)
+        var offPacketList = MIDIPacketList(numPackets: 1, packet: offPacket)
+        MIDIReceived(MIDIHandler.shared.srcPort, &onPacketList)
+        MIDIReceived(MIDIHandler.shared.srcPort, &offPacketList)
+    }
+    
     
     /// buffer a note on message
     ///
