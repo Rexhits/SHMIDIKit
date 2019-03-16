@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SHMIDIKit"
-  s.version      = "0.1.1"
+  s.version      = "0.1.3"
   s.summary      = "Lightweight MIDI framework for iOS and macOS, create virtual MIDI source, parse data into MIDI packet and send them out to DAWs."
 
   # This description is used to generate tags and improve search results.

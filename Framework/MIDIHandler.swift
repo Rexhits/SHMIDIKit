@@ -149,9 +149,9 @@ public extension MIDIHandler {
         
         var offPacket = MIDIPacket()
         #if os(iOS)
-        offPacket.timeStamp = mach_absolute_time() + MIDITimeStamp(duration * 1000)
+        offPacket.timeStamp = mach_absolute_time() + MIDITimeStamp(duration * 1000000)
         #elseif os(OSX)
-        offPacket.timeStamp = AudioConvertHostTimeToNanos(AudioGetCurrentHostTime()) + MIDITimeStamp(duration * 1000)
+        offPacket.timeStamp = AudioConvertHostTimeToNanos(AudioGetCurrentHostTime()) + MIDITimeStamp(duration * 1000000)
         #endif
         offPacket.length = 3
         offPacket.data.0 = MIDIEvent.NoteOff.rawValue
