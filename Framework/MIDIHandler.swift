@@ -104,7 +104,7 @@ public extension MIDIHandler {
         onPacket.timeStamp = AudioConvertHostTimeToNanos(AudioGetCurrentHostTime())
         #endif
         onPacket.length = 3
-        onPacket.data.0 = MIDIEvent.NoteOn.rawValue
+        onPacket.data.0 = MIDIEvent.NoteOn.rawValue + channel
         onPacket.data.1 = noteNumber
         onPacket.data.2 = velocity
         
@@ -117,7 +117,7 @@ public extension MIDIHandler {
         offPacket.timeStamp = AudioConvertHostTimeToNanos(AudioGetCurrentHostTime()) + MIDITimeStamp(duration.rawValue)
         #endif
         offPacket.length = 3
-        offPacket.data.0 = MIDIEvent.NoteOff.rawValue
+        offPacket.data.0 = MIDIEvent.NoteOff.rawValue + channel
         offPacket.data.1 = noteNumber
         offPacket.data.2 = velocity
         
@@ -142,7 +142,7 @@ public extension MIDIHandler {
         onPacket.timeStamp = AudioConvertHostTimeToNanos(AudioGetCurrentHostTime())
         #endif
         onPacket.length = 3
-        onPacket.data.0 = MIDIEvent.NoteOn.rawValue
+        onPacket.data.0 = MIDIEvent.NoteOn.rawValue + channel
         onPacket.data.1 = noteNumber
         onPacket.data.2 = velocity
         
@@ -154,7 +154,7 @@ public extension MIDIHandler {
         offPacket.timeStamp = AudioConvertHostTimeToNanos(AudioGetCurrentHostTime()) + MIDITimeStamp(duration * 1000000)
         #endif
         offPacket.length = 3
-        offPacket.data.0 = MIDIEvent.NoteOff.rawValue
+        offPacket.data.0 = MIDIEvent.NoteOff.rawValue + channel
         offPacket.data.1 = noteNumber
         offPacket.data.2 = velocity
         
